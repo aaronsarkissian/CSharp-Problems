@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace passwordGenerator
+namespace PasswordGenerator
 {
     public class PasswordGenerator
     {
@@ -20,15 +20,17 @@ namespace passwordGenerator
         private char RandomChar()
         {
             Random rand = new Random();
+
             return (char)rand.Next(33, 127); // All Standard and visible ASCII characters
         }
 
         public string Generate()
         {
-            for(int i = 0; i < Length; i++)
+            for (int i = 0; i < Length; i++)
             {
                 Password += RandomChar();
             }
+
             return Password;
         }
     }

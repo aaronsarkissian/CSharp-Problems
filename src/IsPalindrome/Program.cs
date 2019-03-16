@@ -1,13 +1,14 @@
 ﻿using System;
 
-namespace isPalindrome
+namespace IsPalindrome
 {
     class Program
     {
-        public static bool IsPalidrom(string str)
+        public static bool IsPalidrome(string str)
         {
             str = str.ToLower();
             var strLen = str.Length;
+
             for (var i = 0; i < strLen; i++)
             {
                 if (str[i] != str[strLen - 1 - i])
@@ -15,11 +16,13 @@ namespace isPalindrome
                     return false;
                 }
             }
+
             return true;
         }
+
         static void Main(string[] args)
         {
-            Console.Write(IsPalidrom("Deleveled"));
+            Console.Write(IsPalidrome("Deleveled"));
         }
     }
 }
