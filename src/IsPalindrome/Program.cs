@@ -6,12 +6,11 @@ namespace IsPalindrome
     {
         public static bool IsPalidrome(string str)
         {
-            str = str.ToLower();
-            var strLen = str.Length;
+            str = str.ToUpper();
 
-            for (var i = 0; i < strLen; i++)
+            for (var i = 0; i < str.Length/2; i++)
             {
-                if (str[i] != str[strLen - 1 - i])
+                if (str[i] != str[str.Length - 1 - i])
                 {
                     return false;
                 }

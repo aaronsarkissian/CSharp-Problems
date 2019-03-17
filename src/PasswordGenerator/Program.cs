@@ -4,7 +4,7 @@ namespace PasswordGenerator
 {
     public class PasswordGenerator
     {
-        private string Password { get; set; }
+        static Random rand = new Random();
         private int Length { get; }
 
         public PasswordGenerator()
@@ -19,19 +19,19 @@ namespace PasswordGenerator
 
         private char RandomChar()
         {
-            Random rand = new Random();
-
-            return (char)rand.Next(33, 127); // All Standard and visible ASCII characters
+            return (char)rand.Next(33, 127); // All standard and visible ASCII characters
         }
 
         public string Generate()
         {
+            char[] Pass = new char[Length];
+
             for (int i = 0; i < Length; i++)
             {
-                Password += RandomChar();
+                Pass[i] = RandomChar();
             }
 
-            return Password;
+            return new string(Pass);
         }
     }
 
