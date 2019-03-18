@@ -14,7 +14,46 @@ namespace PasswordGenerator
 
         public PasswordGenerator(int length)
         {
-            Length = length;
+            try
+            {
+                length = Convert.ToInt32(length);
+
+                if (length < 8)
+                {
+                    Length = 8;
+                }
+                else
+                {
+                    Length = length;
+                }
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.ToString());
+                throw;
+            }
+        }
+
+        public PasswordGenerator(char charLength)
+        {
+            try
+            {
+                int length = charLength - '0';
+
+                if (length < 8)
+                {
+                    Length = 8;
+                }
+                else
+                {
+                    Length = length;
+                }
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.ToString());
+                throw;
+            }
         }
 
         private char RandomChar()
@@ -39,10 +78,20 @@ namespace PasswordGenerator
     {
         static void Main(string[] args)
         {
-            PasswordGenerator pg1 = new PasswordGenerator();
-            Console.WriteLine(pg1.Generate());
-            PasswordGenerator pg2 = new PasswordGenerator(25);
-            Console.WriteLine(pg2.Generate());
+            try
+            {
+                PasswordGenerator pg1 = new PasswordGenerator();
+                Console.WriteLine(pg1.Generate());
+                PasswordGenerator pg2 = new PasswordGenerator(25);
+                Console.WriteLine(pg2.Generate());
+                PasswordGenerator pg3 = new PasswordGenerator('9');
+                Console.WriteLine(pg3.Generate());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                throw;
+            }
         }
     }
 }
