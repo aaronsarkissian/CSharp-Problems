@@ -6,6 +6,8 @@ namespace PasswordGenerator
     {
         static Random rand = new Random();
         private int Length { get; }
+        const string randomChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789!@#$%^&*()?";
+
 
         public PasswordGenerator()
         {
@@ -58,7 +60,7 @@ namespace PasswordGenerator
 
         private char RandomChar()
         {
-            return (char)rand.Next(33, 127); // All standard and visible ASCII characters
+            return randomChars[rand.Next(0, randomChars.Length)];
         }
 
         public string Generate()

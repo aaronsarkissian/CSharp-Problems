@@ -17,6 +17,7 @@ namespace MinValue
             }
 
             int min = arr[0];
+
             foreach (int i in arr)
             {
                 if (i < min)
