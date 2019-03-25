@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinValue", "src\MinValue\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordGenerator", "src\PasswordGenerator\PasswordGenerator.csproj", "{1ADAEA6E-5F33-424E-A207-8519CEEA63D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciSequence", "src\FibonacciSequence\FibonacciSequence.csproj", "{84EE0512-67EA-481E-90B9-4D20D7CF660F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +31,15 @@ Global
 		{1ADAEA6E-5F33-424E-A207-8519CEEA63D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ADAEA6E-5F33-424E-A207-8519CEEA63D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ADAEA6E-5F33-424E-A207-8519CEEA63D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84EE0512-67EA-481E-90B9-4D20D7CF660F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84EE0512-67EA-481E-90B9-4D20D7CF660F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84EE0512-67EA-481E-90B9-4D20D7CF660F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84EE0512-67EA-481E-90B9-4D20D7CF660F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EFE8DC00-B01E-4C9C-A2E9-DF91CF87032E} = {57470E1F-D38D-459E-A1A7-63C2BF033F8E}
 		{59045F09-1103-4EF2-8301-90CF1E4DE2AE} = {57470E1F-D38D-459E-A1A7-63C2BF033F8E}
 		{1ADAEA6E-5F33-424E-A207-8519CEEA63D1} = {57470E1F-D38D-459E-A1A7-63C2BF033F8E}
+		{84EE0512-67EA-481E-90B9-4D20D7CF660F} = {57470E1F-D38D-459E-A1A7-63C2BF033F8E}
 	EndGlobalSection
 EndGlobal
